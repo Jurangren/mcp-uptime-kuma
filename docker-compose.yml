@@ -10,7 +10,7 @@ services:
 #      - UPTIME_KUMA_JWT_TOKEN=${UPTIME_KUMA_JWT_TOKEN} # Optional, if using JWT authentication
 #      - PORT=3000 # Internal port. This is optional, defaults to 3000
     ports:
-      - "3000:3000"
+      - "3005:3000"
     # Override default CMD to use streamable HTTP transport instead of stdio
     command: ["-t", "streamable-http"]
     restart: unless-stopped
