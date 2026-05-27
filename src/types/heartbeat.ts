@@ -16,6 +16,7 @@ export const HeartbeatSchema = z.object({
   duration: z.number().optional().describe('Seconds since last check'),
   down_count: z.number().optional().describe('Consecutive down count'),
   retries: z.number().optional().describe('Retry attempts'),
+  response: z.unknown().optional().describe('Raw response payload returned by Uptime Kuma when available'),
   end_time: z.string().optional().describe('Check end time'),
   monitorID: z.number().optional().describe('Monitor ID (camelCase)'),
   localDateTime: z.string().optional().describe('Local formatted time'),
