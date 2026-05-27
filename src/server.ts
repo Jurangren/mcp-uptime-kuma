@@ -607,7 +607,12 @@ export async function createServer(config: UptimeKumaConfig): Promise<{ server: 
         port: z.coerce.number().optional().describe('Port number'),
         interval: z.coerce.number().optional().describe('Check interval in seconds'),
         retryInterval: z.coerce.number().optional().describe('Retry interval in seconds'),
+        resendInterval: z.coerce.number().optional().describe('Notification resend interval in seconds (0 = disabled)'),
+        timeout: z.coerce.number().nullable().optional().describe('Request timeout in seconds'),
         maxretries: z.coerce.number().optional().describe('Max retries before marking as down'),
+        description: z.string().nullable().optional().describe('Monitor description'),
+        parent: z.coerce.number().nullable().optional().describe('Parent group monitor ID'),
+        weight: z.coerce.number().nullable().optional().describe('Display order weight'),
         notificationIDList: z.record(z.string(), z.boolean()).optional().describe('Notification ID map'),
         tags: z.array(z.object({
           name: z.string(),

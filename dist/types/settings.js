@@ -10,6 +10,7 @@ export const SettingsSchema = z.object({
     dnsCache: z.boolean().optional().describe('DNS cache enabled'),
     keepDataPeriodDays: z.number().optional().describe('Data retention period (days)'),
     tlsExpiryNotifyDays: z.array(z.number()).optional().describe('TLS expiry notification days'),
+    domainExpiryNotifyDays: z.array(z.number()).optional().describe('Domain expiry notification days'),
     trustProxy: z.boolean().optional().describe('Trust proxy headers'),
     nscd: z.boolean().optional().describe('NSCD enabled'),
     disableAuth: z.boolean().optional().describe('Authentication disabled'),

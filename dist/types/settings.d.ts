@@ -11,6 +11,7 @@ export declare const SettingsSchema: z.ZodObject<{
     dnsCache: z.ZodOptional<z.ZodBoolean>;
     keepDataPeriodDays: z.ZodOptional<z.ZodNumber>;
     tlsExpiryNotifyDays: z.ZodOptional<z.ZodArray<z.ZodNumber, "many">>;
+    domainExpiryNotifyDays: z.ZodOptional<z.ZodArray<z.ZodNumber, "many">>;
     trustProxy: z.ZodOptional<z.ZodBoolean>;
     nscd: z.ZodOptional<z.ZodBoolean>;
     disableAuth: z.ZodOptional<z.ZodBoolean>;
@@ -23,6 +24,7 @@ export declare const SettingsSchema: z.ZodObject<{
     dnsCache?: boolean | undefined;
     keepDataPeriodDays?: number | undefined;
     tlsExpiryNotifyDays?: number[] | undefined;
+    domainExpiryNotifyDays?: number[] | undefined;
     trustProxy?: boolean | undefined;
     nscd?: boolean | undefined;
     disableAuth?: boolean | undefined;
@@ -35,6 +37,7 @@ export declare const SettingsSchema: z.ZodObject<{
     dnsCache?: boolean | undefined;
     keepDataPeriodDays?: number | undefined;
     tlsExpiryNotifyDays?: number[] | undefined;
+    domainExpiryNotifyDays?: number[] | undefined;
     trustProxy?: boolean | undefined;
     nscd?: boolean | undefined;
     disableAuth?: boolean | undefined;
