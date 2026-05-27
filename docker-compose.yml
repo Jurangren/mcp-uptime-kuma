@@ -11,6 +11,10 @@ services:
 #      - PORT=3000 # Internal port. This is optional, defaults to 3000
     ports:
       - "3005:3000"
+    volumes:
+      # Temporary hotfix: run the locally built output instead of the image-bundled dist.
+      # Re-run `npm run build` before restarting this container after source changes.
+      - ./dist:/app/dist:ro
     # Override default CMD to use streamable HTTP transport instead of stdio
     command: ["-t", "streamable-http"]
     restart: unless-stopped
